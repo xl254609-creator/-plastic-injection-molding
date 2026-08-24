@@ -1,0 +1,84 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://yourdomain.com/#organization",
+      "name": "Haiqiang Technology Co., Ltd.",
+      "url": "https://yourdomain.com/",
+      "logo": "https://yourdomain.com/images/logo.jpg",
+      "description": "Plastic injection molding manufacturer in China specializing in mold making, OEM and ODM services.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No. 88 Chuangye Road, Chang'an Town",
+        "addressLocality": "Dongguan",
+        "addressRegion": "Guangdong",
+        "postalCode": "523000",
+        "addressCountry": "CN"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+86-137-2555-0798",
+          "contactType": "sales",
+          "email": "sales@haiqiang-molding.com",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["English", "Chinese"]
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/yourpage",
+        "https://www.linkedin.com/company/yourcompany"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://yourdomain.com/#website",
+      "url": "https://yourdomain.com/",
+      "name": "Haiqiang Plastic Injection Molding",
+      "description": "Custom plastic injection molding, mold making and OEM/ODM services from China.",
+      "publisher": {
+        "@id": "https://yourdomain.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://yourdomain.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://yourdomain.com/#webpage",
+      "url": "https://yourdomain.com/",
+      "name": "Haiqiang Plastic Injection Molding Manufacturer",
+      "description": "Leading plastic injection molding manufacturer in China. Custom molds, OEM/ODM services and global delivery.",
+      "isPartOf": { "@id": "https://yourdomain.com/#website" },
+      "about": { "@id": "https://yourdomain.com/#organization" }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://yourdomain.com/#service",
+      "name": "Haiqiang Plastic Injection Molding Services",
+      "url": "https://yourdomain.com/services.html",
+      "serviceType": "Plastic Injection Molding",
+      "areaServed": "Worldwide",
+      "provider": { "@id": "https://yourdomain.com/#organization" },
+      "description": "Comprehensive plastic injection molding services including mold making, injection molding, product design, surface finishing, assembly and OEM/ODM manufacturing.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Injection Molding Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Injection Mold Making" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Injection Molding Production" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "OEM Manufacturing" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ODM Product Development" } }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "120"
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# Robots.txt for Haiqiang Plastic Injection Molding Website
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://yourdomain.com/sitemap.xml

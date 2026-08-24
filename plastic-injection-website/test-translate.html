@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>translate test</title>
+</head>
+<body>
+<h1 id="t1">Precision Plastic Injection Molding</h1>
+<p id="t2">We deliver high-quality custom plastic parts.</p>
+<script src="js/translate.js"></script>
+<script>
+  translate.language.setDefaultTo('english');
+  translate.execute();
+  setTimeout(function(){
+    try { translate.changeLanguage('chinese_simplified'); } catch(e){ console.log('ERR', e.message); }
+  }, 2000);
+</script>
+</body>
+</html>
