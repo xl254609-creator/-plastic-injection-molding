@@ -22,8 +22,7 @@
   <meta name="twitter:description" content="Common questions about injection molding services.">
   <meta name="twitter:image" content="https://yourdomain.com/images/og-faq.jpg">
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="./css/style.css">
 
   <!-- FAQPage Structured Data for Google SEO -->
   <script type="application/ld+json">
@@ -131,7 +130,7 @@
             <li><a href="#" data-lang="portuguese">Português</a></li>
             <li><a href="#" data-lang="russian">Русский</a></li>
             <li><a href="#" data-lang="arabic">العربية</a></li>
-            <li><a href="#" data-lang="chinese_simplified">中文</a></li>
+            <li><a href="#" data-lang="chinese_simplified">Simplified Chinese</a></li>
           </ul>
         </div>
       </nav>
@@ -281,12 +280,13 @@
 
   <a href="https://wa.me/8613725550798" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
 
-  <script src="js/main.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/i18n.js"></script>
 
-  <!-- translate.js - 全站多语言翻译引擎 (本地加载，国内可访问) -->
-  <script src="js/translate.js"></script>
+  <!-- translate.js - optional multilingual translation engine -->
   <script type="text/javascript">
     (function () {
+      if (window.siteI18nReady) return;
       translate.service.use('client.edge');
       translate.language.setDefaultTo('english');
       translate.selectLanguageTag.show = false;

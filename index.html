@@ -25,8 +25,7 @@
   <meta name="twitter:description" content="Custom plastic injection molding, mold making, OEM/ODM. Get a free quote.">
   <meta name="twitter:image" content="https://yourdomain.com/images/og-home.jpg">
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
@@ -67,7 +66,7 @@
             <li><a href="#" data-lang="portuguese">Português</a></li>
             <li><a href="#" data-lang="russian">Русский</a></li>
             <li><a href="#" data-lang="arabic">العربية</a></li>
-            <li><a href="#" data-lang="chinese_simplified">中文</a></li>
+            <li><a href="#" data-lang="chinese_simplified">Simplified Chinese</a></li>
           </ul>
         </div>
       </nav>
@@ -487,24 +486,25 @@
   <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/8613725550798" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
 
-  <script src="js/main.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/i18n.js"></script>
 
-  <!-- translate.js - 全站多语言翻译引擎 (本地加载，国内可访问) -->
-  <script src="js/translate.js"></script>
+  <!-- translate.js - optional multilingual translation engine -->
   <script type="text/javascript">
     (function () {
-      // 使用微软翻译引擎（edge 接口），国内外均可访问
+      if (window.siteI18nReady) return;
+      // Use the Microsoft Edge translation service.
       translate.service.use('client.edge');
-      // 默认语言英文，不自动识别
+      // Keep English as the default language without auto-detection.
       translate.language.setDefaultTo('english');
-      // 隐藏 translate.js 自带的右下角语言选择框（使用自定义菜单）
+      // Hide translate.js's built-in selector and use the custom menu.
       translate.selectLanguageTag.show = false;
-      // 实时翻译动态内容
+      // Translate dynamic content in real time.
       translate.listener.start();
-      // 执行翻译初始化
+      // Initialize translation.
       translate.execute();
 
-      // ---- 自定义语言菜单控制 ----
+      // ---- Custom language menu controls ----
       var btn = document.getElementById('langBtn');
       var menu = document.getElementById('langMenu');
       if (!btn || !menu) return;
@@ -525,7 +525,7 @@
         }
       });
 
-      // 切换语言
+      // Change language.
       menu.querySelectorAll('a[data-lang]').forEach(function (a) {
         a.addEventListener('click', function (e) {
           e.preventDefault();
@@ -536,7 +536,7 @@
             x.classList.remove('lang-active');
           });
           a.classList.add('lang-active');
-          // 关闭菜单并执行翻译
+          // Close the menu and translate the page.
           menu.classList.remove('open');
           btn.setAttribute('aria-expanded', 'false');
           if (typeof translate !== 'undefined') {
