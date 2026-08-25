@@ -22,8 +22,8 @@
   <meta name="twitter:description" content="Full-service plastic injection molding with mold making and OEM/ODM.">
   <meta name="twitter:image" content="https://yourdomain.com/images/og-services.jpg">
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/png" href="./images/favicon.png">
 </head>
 <body>
 
@@ -274,12 +274,13 @@
 
   <a href="https://wa.me/8613725550798" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
 
-  <script src="js/main.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/i18n.js"></script>
 
   <!-- translate.js - 全站多语言翻译引擎 (本地加载，国内可访问) -->
-  <script src="js/translate.js"></script>
   <script type="text/javascript">
     (function () {
+      if (window.siteI18nReady) return;
       // 使用微软翻译引擎（edge 接口），国内外均可访问
       translate.service.use('client.edge');
       // 默认语言英文，不自动识别

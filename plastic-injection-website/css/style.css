@@ -48,6 +48,7 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  image-rendering: auto;
 }
 
 a {
@@ -143,8 +144,9 @@ ul {
 
 .logo-img {
   height: 50px;
-  width: auto;
+  width: 84px;
   border-radius: 6px;
+  object-fit: contain;
 }
 
 .logo-text h1 {
@@ -1204,6 +1206,7 @@ table.data-table tr:hover {
 .lang-switcher {
   position: relative;
   margin-left: 10px;
+  z-index: 1100;
 }
 
 .lang-btn {
@@ -1248,7 +1251,7 @@ table.data-table tr:hover {
   list-style: none;
   margin: 0;
   padding: 6px;
-  z-index: 1001;
+  z-index: 1101;
 }
 
 .lang-menu.open {
